@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Antoine's Website</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+  </head>
+  
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Antoine's webpage</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('page01')}}">Page 01</a></li>
+            <li><a href="{{url_for('page02')}}">Page 02</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    <div class="container">
+      {%block content%}
+      {%endblock%}
+  </body>
+</html>
